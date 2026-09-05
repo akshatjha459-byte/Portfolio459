@@ -69,31 +69,25 @@
             <h3 class="project-title">CloudAWSProject-101</h3>
             <a href="https://github.com/akshatjha459-byte/CloudAWSProject-101" target="_blank" rel="noopener" class="project-link">github.com/akshatjha459-byte/CloudAWSProject-101</a>
           </div>
-          <p class="project-description">A hybrid-cloud file synchronization system built with a FastAPI backend and AWS infrastructure. Designed with modular architecture, storage/metadata abstractions, and synchronization logic.</p>
+          <p class="project-description">A hybrid-cloud file synchronization system. A FastAPI backend coordinates file watching, change detection, and sync logic, with AWS handling object storage and compute.</p>
 
           <div class="project-details">
-            <h4>Architecture</h4>
+            <h4>What it does</h4>
             <ul>
-              <li>10-module structure separating concerns: local filesystem, filesystem watching, change detection, sync orchestration, API layer, AWS integration, bidirectional sync, conflict resolution, observability, and dashboard</li>
-              <li>Adapter pattern for storage and metadata backends—swap between in-memory (development) and AWS S3 / PostgreSQL RDS (production)</li>
-              <li>SHA-256 hashing for reliable change detection</li>
-              <li>Built-in observability layer for monitoring and alerting</li>
+              <li>Tracks a local filesystem, detects changes with SHA-256 hashing, and syncs files to AWS S3 through a modular pipeline</li>
             </ul>
 
-            <h4>Technology</h4>
+            <h4>How it's built</h4>
             <ul>
-              <li>FastAPI, Python, Uvicorn</li>
-              <li>AWS S3 (object storage), EC2 (compute), RDS (PostgreSQL)</li>
-              <li>Docker, SQLAlchemy, boto3</li>
-              <li>REST API, filesystem watchers, automated testing</li>
+              <li>10-module architecture: filesystem watching, change detection, sync orchestration, API layer, AWS integration, bidirectional sync, conflict resolution, observability, and dashboard</li>
+              <li>Adapter pattern for storage and metadata backends—in-memory for development, S3 plus PostgreSQL RDS for production</li>
             </ul>
 
-            <h4>Key Engineering Decisions</h4>
+            <h4>Engineering choices</h4>
             <ul>
-              <li>Environment-driven configuration via .env for portability—no hardcoded paths or credentials</li>
-              <li>Application factory pattern in FastAPI for clean testability and dependency injection</li>
-              <li>Separation of concerns: adapters, services, routes, and infrastructure are independently maintainable</li>
-              <li>Static dashboard mounted directly within the FastAPI application</li>
+              <li>Environment-driven configuration via .env for portability</li>
+              <li>FastAPI application factory for clean testability</li>
+              <li>Separation of adapters, services, routes, and infrastructure</li>
             </ul>
           </div>
 
