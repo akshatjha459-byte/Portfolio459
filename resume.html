@@ -3,25 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Akshat Jha — Resume</title>
-  <meta name="description" content="Resume of Akshat Jha — B.Tech IT undergraduate at VIT Vellore.">
+  <title>Akshat.Jha — Resume</title>
+  <meta name="description" content="Resume of Akshat.Jha — B.Tech IT undergraduate at VIT Vellore.">
   <link rel="stylesheet" href="css/style.css">
   <style>
     .resume-container {
-      max-width: 800px;
+      max-width: 780px;
       margin: 0 auto;
-      padding: 60px 24px;
-      background: white;
+      padding: 56px 24px;
+      background: var(--bg-elevated);
       border: 1px solid var(--border);
       border-radius: 8px;
     }
     .resume-header {
-      margin-bottom: 40px;
-      padding-bottom: 24px;
-      border-bottom: 2px solid var(--text);
+      margin-bottom: 36px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--border);
     }
     .resume-header h1 {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       margin-bottom: 8px;
       letter-spacing: -0.03em;
     }
@@ -31,8 +31,8 @@
     .resume-contact {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px 24px;
-      font-size: 0.9rem;
+      gap: 10px 22px;
+      font-size: 0.88rem;
       color: var(--text-muted);
       margin-top: 8px;
     }
@@ -44,21 +44,21 @@
       color: var(--accent);
     }
     .resume-section {
-      margin-bottom: 32px;
+      margin-bottom: 28px;
     }
     .resume-section:last-child {
       margin-bottom: 0;
     }
     .resume-section h2 {
-      font-size: 1.1rem;
+      font-size: 1rem;
       text-transform: uppercase;
       letter-spacing: 0.12em;
       color: var(--text-muted);
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       font-weight: 600;
     }
     .resume-item {
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
     .resume-item:last-child {
       margin-bottom: 0;
@@ -67,42 +67,42 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      margin-bottom: 4px;
+      margin-bottom: 3px;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 6px;
     }
     .resume-item-title {
       font-weight: 700;
-      font-size: 1rem;
+      font-size: 0.98rem;
     }
     .resume-item-date {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       color: var(--text-muted);
     }
     .resume-item-subtitle {
       color: var(--text-muted);
-      font-size: 0.9rem;
-      margin-bottom: 6px;
+      font-size: 0.88rem;
+      margin-bottom: 4px;
     }
     .resume-item-desc {
-      font-size: 0.9rem;
-      line-height: 1.6;
+      font-size: 0.88rem;
+      line-height: 1.55;
     }
     .resume-item-desc ul {
-      margin-top: 6px;
+      margin-top: 5px;
       padding-left: 18px;
     }
     .resume-item-desc li {
-      margin-bottom: 4px;
+      margin-bottom: 3px;
     }
     .resume-skills-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px 16px;
+      gap: 6px 14px;
     }
     .resume-skill-tag {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
     }
     .resume-skill-tag::after {
       content: ',';
@@ -113,18 +113,18 @@
     }
     .print-btn {
       position: fixed;
-      bottom: 24px;
-      right: 24px;
+      bottom: 22px;
+      right: 22px;
       background: var(--accent);
       color: white;
       border: none;
-      padding: 12px 20px;
-      border-radius: 8px;
+      padding: 10px 18px;
+      border-radius: 6px;
       font-family: inherit;
       font-weight: 600;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
       transition: background 0.2s ease;
       z-index: 50;
     }
@@ -135,8 +135,8 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      margin-bottom: 24px;
-      font-size: 0.9rem;
+      margin-bottom: 22px;
+      font-size: 0.88rem;
       color: var(--text-muted);
     }
     .back-link:hover {
@@ -144,7 +144,7 @@
     }
     @media print {
       body {
-        background: white;
+        background: #0f0f0f;
       }
       .nav, .print-btn, .back-link {
         display: none !important;
@@ -154,14 +154,15 @@
         box-shadow: none;
         padding: 0;
         max-width: 100%;
+        background: transparent;
       }
     }
     @media (max-width: 768px) {
       .resume-container {
-        padding: 40px 20px;
+        padding: 36px 18px;
       }
       .resume-header h1 {
-        font-size: 2rem;
+        font-size: 1.85rem;
       }
     }
   </style>
@@ -170,7 +171,7 @@
 
   <nav class="nav">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">akshat<span>.</span>jha</a>
+      <a href="index.html" class="nav-logo">Akshat<span>.</span>Jha</a>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html#about" onclick="closeMenu()">About</a></li>
         <li><a href="index.html#projects" onclick="closeMenu()">Projects</a></li>
@@ -194,7 +195,7 @@
 
       <div class="resume-container">
         <div class="resume-header">
-          <h1>akshat <span>jha</span></h1>
+          <h1>Akshat<span>.</span>Jha</h1>
           <div class="resume-contact">
             <a href="mailto:akshatjha459@gmail.com">akshatjha459@gmail.com</a>
             <span>|</span>
@@ -221,7 +222,7 @@
               <div class="resume-item-title">Class XII</div>
               <div class="resume-item-date">2023 – 2024</div>
             </div>
-            <div class="resume-item-subtitle">Central Board of Secondary Education (CBSE)</div>
+            <div class="resume-item-subtitle">City Montessori School (CMS), Lucknow — ISC</div>
             <div class="resume-item-desc">Percentage: 89%</div>
           </div>
           <div class="resume-item">
@@ -229,7 +230,7 @@
               <div class="resume-item-title">Class X</div>
               <div class="resume-item-date">2021 – 2022</div>
             </div>
-            <div class="resume-item-subtitle">Central Board of Secondary Education (CBSE)</div>
+            <div class="resume-item-subtitle">City Montessori School (CMS), Lucknow — ISC</div>
             <div class="resume-item-desc">Percentage: 94%</div>
           </div>
         </div>
@@ -246,17 +247,12 @@
             <span class="resume-skill-tag">REST APIs</span>
             <span class="resume-skill-tag">MySQL</span>
             <span class="resume-skill-tag">MongoDB</span>
-            <span class="resume-skill-tag">PostgreSQL</span>
             <span class="resume-skill-tag">AWS (S3, EC2)</span>
-            <span class="resume-skill-tag">Docker</span>
-            <span class="resume-skill-tag">SQLAlchemy</span>
-            <span class="resume-skill-tag">boto3</span>
-            <span class="resume-skill-tag">Git/GitHub</span>
-            <span class="resume-skill-tag">Software Architecture</span>
+            <span class="resume-skill-tag">Git</span>
+            <span class="resume-skill-tag">GitHub</span>
             <span class="resume-skill-tag">API Development</span>
+            <span class="resume-skill-tag">Software Architecture</span>
             <span class="resume-skill-tag">Debugging</span>
-            <span class="resume-skill-tag">CI/CD</span>
-            <span class="resume-skill-tag">Observability</span>
           </div>
         </div>
 
