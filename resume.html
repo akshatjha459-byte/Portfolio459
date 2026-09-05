@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akshat Jha — Resume</title>
+  <meta name="description" content="Resume of Akshat Jha — B.Tech IT undergraduate at VIT Vellore.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .resume-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 24px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+    .resume-header {
+      margin-bottom: 40px;
+      padding-bottom: 24px;
+      border-bottom: 2px solid var(--text);
+    }
+    .resume-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 8px;
+      letter-spacing: -0.03em;
+    }
+    .resume-header h1 span {
+      color: var(--accent);
+    }
+    .resume-contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+    .resume-contact a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+    .resume-contact a:hover {
+      color: var(--accent);
+    }
+    .resume-section {
+      margin-bottom: 32px;
+    }
+    .resume-section:last-child {
+      margin-bottom: 0;
+    }
+    .resume-section h2 {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+    .resume-item {
+      margin-bottom: 20px;
+    }
+    .resume-item:last-child {
+      margin-bottom: 0;
+    }
+    .resume-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .resume-item-title {
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .resume-item-date {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .resume-item-subtitle {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+    .resume-item-desc {
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    .resume-item-desc ul {
+      margin-top: 6px;
+      padding-left: 18px;
+    }
+    .resume-item-desc li {
+      margin-bottom: 4px;
+    }
+    .resume-skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+    }
+    .resume-skill-tag {
+      font-size: 0.9rem;
+    }
+    .resume-skill-tag::after {
+      content: ',';
+      color: var(--text-muted);
+    }
+    .resume-skill-tag:last-child::after {
+      content: '';
+    }
+    .print-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: background 0.2s ease;
+      z-index: 50;
+    }
+    .print-btn:hover {
+      background: var(--accent-hover);
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 24px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+    .back-link:hover {
+      color: var(--accent);
+    }
+    @media print {
+      body {
+        background: white;
+      }
+      .nav, .print-btn, .back-link {
+        display: none !important;
+      }
+      .resume-container {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+      }
+    }
+    @media (max-width: 768px) {
+      .resume-container {
+        padding: 40px 20px;
+      }
+      .resume-header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">akshat<span>.</span>jha</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#about" onclick="closeMenu()">About</a></li>
+        <li><a href="index.html#projects" onclick="closeMenu()">Projects</a></li>
+        <li><a href="index.html#skills" onclick="closeMenu()">Skills</a></li>
+        <li><a href="index.html#education" onclick="closeMenu()">Education</a></li>
+        <li><a href="index.html#contact" onclick="closeMenu()">Contact</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <a href="index.html" class="back-link">&larr; Back to portfolio</a>
+
+      <div class="resume-container">
+        <div class="resume-header">
+          <h1>akshat <span>jha</span></h1>
+          <div class="resume-contact">
+            <a href="mailto:akshatjha459@gmail.com">akshatjha459@gmail.com</a>
+            <span>|</span>
+            <a href="tel:+918948601809">+91 89486 01809</a>
+            <span>|</span>
+            <a href="https://github.com/akshatjha459-byte" target="_blank" rel="noopener">github.com/akshatjha459-byte</a>
+            <span>|</span>
+            <a href="https://www.linkedin.com/in/akshat-jha-091984410/" target="_blank" rel="noopener">linkedin.com/in/akshat-jha-091984410</a>
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <h2>Education</h2>
+          <div class="resume-item">
+            <div class="resume-item-header">
+              <div class="resume-item-title">B.Tech Information Technology</div>
+              <div class="resume-item-date">2024 – 2028</div>
+            </div>
+            <div class="resume-item-subtitle">Vellore Institute of Technology (VIT), Vellore</div>
+            <div class="resume-item-desc">CGPA: 8.02/10</div>
+          </div>
+          <div class="resume-item">
+            <div class="resume-item-header">
+              <div class="resume-item-title">Class XII</div>
+              <div class="resume-item-date">2023 – 2024</div>
+            </div>
+            <div class="resume-item-subtitle">Central Board of Secondary Education (CBSE)</div>
+            <div class="resume-item-desc">Percentage: 89%</div>
+          </div>
+          <div class="resume-item">
+            <div class="resume-item-header">
+              <div class="resume-item-title">Class X</div>
+              <div class="resume-item-date">2021 – 2022</div>
+            </div>
+            <div class="resume-item-subtitle">Central Board of Secondary Education (CBSE)</div>
+            <div class="resume-item-desc">Percentage: 94%</div>
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <h2>Technical Skills</h2>
+          <div class="resume-skills-list">
+            <span class="resume-skill-tag">C++</span>
+            <span class="resume-skill-tag">Python</span>
+            <span class="resume-skill-tag">JavaScript</span>
+            <span class="resume-skill-tag">SQL</span>
+            <span class="resume-skill-tag">Node.js</span>
+            <span class="resume-skill-tag">FastAPI</span>
+            <span class="resume-skill-tag">REST APIs</span>
+            <span class="resume-skill-tag">MySQL</span>
+            <span class="resume-skill-tag">MongoDB</span>
+            <span class="resume-skill-tag">PostgreSQL</span>
+            <span class="resume-skill-tag">AWS (S3, EC2)</span>
+            <span class="resume-skill-tag">Docker</span>
+            <span class="resume-skill-tag">SQLAlchemy</span>
+            <span class="resume-skill-tag">boto3</span>
+            <span class="resume-skill-tag">Git/GitHub</span>
+            <span class="resume-skill-tag">Software Architecture</span>
+            <span class="resume-skill-tag">API Development</span>
+            <span class="resume-skill-tag">Debugging</span>
+            <span class="resume-skill-tag">CI/CD</span>
+            <span class="resume-skill-tag">Observability</span>
+          </div>
+        </div>
+
+        <div class="resume-section">
+          <h2>Projects</h2>
+          <div class="resume-item">
+            <div class="resume-item-header">
+              <div class="resume-item-title">CloudAWSProject-101</div>
+              <div class="resume-item-date">2025 – Present</div>
+            </div>
+            <div class="resume-item-desc">
+              Hybrid-cloud file synchronization system built with FastAPI and AWS infrastructure.
+              <ul>
+                <li>Designed a 10-module architecture separating filesystem watching, change detection, sync orchestration, and AWS integration</li>
+                <li>Implemented adapter pattern for storage/metadata backends—in-memory for development, S3 + PostgreSQL RDS for production</li>
+                <li>Used SHA-256 hashing for reliable change detection and built-in observability for monitoring</li>
+                <li>Tech: Python, FastAPI, AWS S3, EC2, RDS, Docker, SQLAlchemy, boto3</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <button class="print-btn" onclick="window.print()">Print / Save PDF</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

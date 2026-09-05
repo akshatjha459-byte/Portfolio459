@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akshat Jha — Portfolio</title>
+  <meta name="description" content="Akshat Jha — B.Tech IT undergraduate at VIT Vellore. Building backend systems, cloud infrastructure, and APIs.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">akshat<span>.</span>jha</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" onclick="closeMenu()">About</a></li>
+        <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+        <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
+        <li><a href="#education" onclick="closeMenu()">Education</a></li>
+        <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <h1 class="hero-name fade-in">akshat <span>jha</span></h1>
+        <div class="hero-terminal fade-in">
+          <div><span class="prompt">&gt;</span>IT undergraduate at VIT Vellore</div>
+          <div><span class="prompt">&gt;</span>Backend systems, cloud infrastructure, APIs</div>
+          <div><span class="prompt">&gt;</span>Currently looking for internships</div>
+        </div>
+        <div class="hero-links fade-in">
+          <a href="https://github.com/akshatjha459-byte" target="_blank" rel="noopener" class="btn btn-secondary">GitHub</a>
+          <a href="https://www.linkedin.com/in/akshat-jha-091984410/" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn</a>
+          <a href="resume.html" class="btn btn-primary">Resume</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <span class="section-label fade-in">About</span>
+        <div class="about-text fade-in">
+          <p>I'm a third-year Information Technology undergraduate at VIT Vellore (2024–2028) with a CGPA of 8.02/10. I'm focused on building practical software—backend services, APIs, and cloud infrastructure—rather than chasing trends.</p>
+          <p>Right now I'm looking for internships and technical opportunities where I can contribute to real engineering problems and keep getting better at building things that work.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="container">
+        <span class="section-label fade-in">Projects</span>
+        <h2 class="fade-in">Featured Work</h2>
+
+        <div class="project-card fade-in">
+          <div class="project-header">
+            <h3 class="project-title">CloudAWSProject-101</h3>
+            <a href="https://github.com/akshatjha459-byte/CloudAWSProject-101" target="_blank" rel="noopener" class="project-link">github.com/akshatjha459-byte/CloudAWSProject-101</a>
+          </div>
+          <p class="project-description">A hybrid-cloud file synchronization system built with a FastAPI backend and AWS infrastructure. Designed with modular architecture, storage/metadata abstractions, and synchronization logic.</p>
+
+          <div class="project-details">
+            <h4>Architecture</h4>
+            <ul>
+              <li>10-module structure separating concerns: local filesystem, filesystem watching, change detection, sync orchestration, API layer, AWS integration, bidirectional sync, conflict resolution, observability, and dashboard</li>
+              <li>Adapter pattern for storage and metadata backends—swap between in-memory (development) and AWS S3 / PostgreSQL RDS (production)</li>
+              <li>SHA-256 hashing for reliable change detection</li>
+              <li>Built-in observability layer for monitoring and alerting</li>
+            </ul>
+
+            <h4>Technology</h4>
+            <ul>
+              <li>FastAPI, Python, Uvicorn</li>
+              <li>AWS S3 (object storage), EC2 (compute), RDS (PostgreSQL)</li>
+              <li>Docker, SQLAlchemy, boto3</li>
+              <li>REST API, filesystem watchers, automated testing</li>
+            </ul>
+
+            <h4>Key Engineering Decisions</h4>
+            <ul>
+              <li>Environment-driven configuration via .env for portability—no hardcoded paths or credentials</li>
+              <li>Application factory pattern in FastAPI for clean testability and dependency injection</li>
+              <li>Separation of concerns: adapters, services, routes, and infrastructure are independently maintainable</li>
+              <li>Static dashboard mounted directly within the FastAPI application</li>
+            </ul>
+          </div>
+
+          <div class="tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">FastAPI</span>
+            <span class="tech-tag">AWS</span>
+            <span class="tech-tag">S3</span>
+            <span class="tech-tag">EC2</span>
+            <span class="tech-tag">RDS</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">SQLAlchemy</span>
+            <span class="tech-tag">boto3</span>
+            <span class="tech-tag">REST APIs</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <div class="container">
+        <span class="section-label fade-in">Technical Skills</span>
+        <div class="skills-grid">
+          <div class="skill-category fade-in">
+            <h3>Languages</h3>
+            <div class="skill-list">
+              <span class="skill-item">C++</span>
+              <span class="skill-item">Python</span>
+              <span class="skill-item">JavaScript</span>
+              <span class="skill-item">SQL</span>
+            </div>
+          </div>
+          <div class="skill-category fade-in">
+            <h3>Backend & APIs</h3>
+            <div class="skill-list">
+              <span class="skill-item">Node.js</span>
+              <span class="skill-item">FastAPI</span>
+              <span class="skill-item">REST APIs</span>
+              <span class="skill-item">Software Architecture</span>
+              <span class="skill-item">API Development</span>
+            </div>
+          </div>
+          <div class="skill-category fade-in">
+            <h3>Data</h3>
+            <div class="skill-list">
+              <span class="skill-item">MySQL</span>
+              <span class="skill-item">MongoDB</span>
+              <span class="skill-item">PostgreSQL</span>
+              <span class="skill-item">SQLAlchemy</span>
+            </div>
+          </div>
+          <div class="skill-category fade-in">
+            <h3>Cloud & DevOps</h3>
+            <div class="skill-list">
+              <span class="skill-item">AWS</span>
+              <span class="skill-item">S3</span>
+              <span class="skill-item">EC2</span>
+              <span class="skill-item">Docker</span>
+              <span class="skill-item">Git</span>
+              <span class="skill-item">GitHub</span>
+            </div>
+          </div>
+          <div class="skill-category fade-in">
+            <h3>Practices</h3>
+            <div class="skill-list">
+              <span class="skill-item">Debugging</span>
+              <span class="skill-item">Automated Testing</span>
+              <span class="skill-item">CI/CD</span>
+              <span class="skill-item">Observability</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <div class="container">
+        <span class="section-label fade-in">Education</span>
+        <h2 class="fade-in">Academic Background</h2>
+
+        <div class="edu-item fade-in">
+          <div class="edu-year">2024–2028</div>
+          <div class="edu-details">
+            <h3>B.Tech Information Technology</h3>
+            <p>Vellore Institute of Technology (VIT), Vellore</p>
+            <p class="edu-grade">CGPA: 8.02/10</p>
+          </div>
+        </div>
+
+        <div class="edu-item fade-in">
+          <div class="edu-year">2023–2024</div>
+          <div class="edu-details">
+            <h3>Class XII</h3>
+            <p>Central Board of Secondary Education (CBSE)</p>
+            <p class="edu-grade">Percentage: 89%</p>
+          </div>
+        </div>
+
+        <div class="edu-item fade-in">
+          <div class="edu-year">2021–2022</div>
+          <div class="edu-details">
+            <h3>Class X</h3>
+            <p>Central Board of Secondary Education (CBSE)</p>
+            <p class="edu-grade">Percentage: 94%</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <span class="section-label fade-in">Contact</span>
+        <h2 class="fade-in">Get in Touch</h2>
+        <div class="contact-links fade-in">
+          <a href="mailto:akshatjha459@gmail.com" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+              <path d="M22 7l-10 7L2 7"></path>
+            </svg>
+            akshatjha459@gmail.com
+          </a>
+          <a href="tel:+918948601809" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            +91 89486 01809
+          </a>
+          <a href="https://github.com/akshatjha459-byte" target="_blank" rel="noopener" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+            github.com/akshatjha459-byte
+          </a>
+          <a href="https://www.linkedin.com/in/akshat-jha-091984410/" target="_blank" rel="noopener" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+            linkedin.com/in/akshat-jha-091984410
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        Akshat Jha &copy; 2026. Built with plain HTML, CSS, and JavaScript.
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
